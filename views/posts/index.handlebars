@@ -1,0 +1,20 @@
+
+
+{{#each posts}}
+<div class="cach cach-body">
+    <h4>{{title}}</h4>
+    <p>{{text}}</p>
+    <a href="/posts/edit/{{_id}}" class="btn btn-dark btn-block mb-2">Thay đổi</a>
+    <form action="/posts/{{_id}}?_method=DELETE" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Xoá" class="btn btn-danger btn-block">
+    </form>
+</div>
+
+{{else}}
+<p>Chưa có bài viết</p>
+
+{{/each}}
+
+
+
